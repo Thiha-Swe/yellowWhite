@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
 map.on('load', function () {
 
     map.loadImage(
-        'y90x52.png',
+        'y/90x52.png',
         function (error, image) {
             if (error) throw error;
 
@@ -25,7 +25,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09y1</p>',
+                                    '<p>Address: Test</p><p>Phone 09</p>',
                                 
                             },
                             "geometry": {
@@ -38,7 +38,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09y2</p>',
+                                    '<p>Address: Test</p><p>Phone 09</p>',
                                 
                             },
                             "geometry": {
@@ -65,7 +65,7 @@ map.on('load', function () {
         });
 
     map.loadImage(
-        'w90x52.png',
+        'w/90x52.png',
         function (error, image) {
             if (error) throw error;
 
@@ -80,7 +80,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09w1</p>',
+                                    '<p>Address: Test</p><p>Phone 09</p>',
                                 
                             },
                             "geometry": {
@@ -93,7 +93,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09w2</p>',
+                                    '<p>Address: Test</p><p>Phone 09</p>',
                                 
                             },
                             "geometry": {
@@ -123,7 +123,7 @@ map.on('load', function () {
 
 function showFlag() {
     if (map.getLayer('yellowFlag') && map.getLayer('whiteFlag')) {
-   
+        
         var checkBox = document.getElementById('mapCheck');
         
 
@@ -171,7 +171,7 @@ function showFlag() {
             }
             else
             {
-      
+           
                 var whiteLayer = "whiteFlag";
                 var yellowLayer = "yellowFlag";
 
@@ -216,6 +216,14 @@ function showFlag() {
     
     }
 
+    var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+        accessToken: mapboxgl.accessToken, // Set the access token
+        mapboxgl: mapboxgl, // Set the mapbox-gl instance
+        marker: false, // Do not use the default marker style
+      });
+      
+      // Add the geocoder to the map
+      map.addControl(geocoder);
 map.addControl(new mapboxgl.FullscreenControl());
 map.addControl(new mapboxgl.NavigationControl());
 
@@ -252,3 +260,4 @@ map.addControl(new mapboxgl.NavigationControl());
             .setHTML(description)
             .addTo(map);
     });
+
