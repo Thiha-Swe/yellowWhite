@@ -216,6 +216,9 @@ function showFlag() {
     
     }
 
+map.addControl(new mapboxgl.FullscreenControl());
+map.addControl(new mapboxgl.NavigationControl());
+
     map.on('click', 'yellowFlag', function (e) {
         var coordinates = e.features[0].geometry.coordinates.slice();
         var description = e.features[0].properties.description;
