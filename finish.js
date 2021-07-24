@@ -25,7 +25,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09</p>',
+                                    '<p>Address: Test</p><p>Phone 09y1</p>',
                                 
                             },
                             "geometry": {
@@ -38,7 +38,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09</p>',
+                                    '<p>Address: Test</p><p>Phone 09y2</p>',
                                 
                             },
                             "geometry": {
@@ -80,7 +80,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09</p>',
+                                    '<p>Address: Test</p><p>Phone 09w1</p>',
                                 
                             },
                             "geometry": {
@@ -93,7 +93,7 @@ map.on('load', function () {
                             "type": "Feature",
                             "properties": {
                                 "description":
-                                    '<p>Address: Test</p><p>Phone 09</p>',
+                                    '<p>Address: Test</p><p>Phone 09w2</p>',
                                 
                             },
                             "geometry": {
@@ -123,13 +123,13 @@ map.on('load', function () {
 
 function showFlag() {
     if (map.getLayer('yellowFlag') && map.getLayer('whiteFlag')) {
-        alert("success");
+   
         var checkBox = document.getElementById('mapCheck');
         
 
             if(checkBox.checked == true)
             {
-                alert("White Flag will be hide");
+               
                 var whiteLayer = "whiteFlag";
                 var yellowLayer = "yellowFlag";
 
@@ -171,7 +171,7 @@ function showFlag() {
             }
             else
             {
-                alert("Yellow Flag will be hide");
+      
                 var whiteLayer = "whiteFlag";
                 var yellowLayer = "yellowFlag";
 
