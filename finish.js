@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
 map.on('load', function () {
 
     map.loadImage(
-        'y/90x52.png',
+        'y90x52.png',
         function (error, image) {
             if (error) throw error;
 
@@ -65,7 +65,7 @@ map.on('load', function () {
         });
 
     map.loadImage(
-        'w/90x52.png',
+        'w90x52.png',
         function (error, image) {
             if (error) throw error;
 
